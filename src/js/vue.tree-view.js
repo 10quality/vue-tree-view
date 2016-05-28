@@ -65,7 +65,7 @@ Vue.component('treeview', Vue.extend({
         labelname:
         {
             Type: String,
-            default: 'name',
+            default: 'label',
         },
         /**
          * Name of the property holding the node value.
@@ -75,7 +75,7 @@ Vue.component('treeview', Vue.extend({
         valuename:
         {
             Type: String,
-            default: 'id',
+            default: 'value',
         },
     },
     data: function() {
