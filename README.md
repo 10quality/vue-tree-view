@@ -6,8 +6,11 @@
 Tree view component for [Vue Js](http://vuejs.org/).
 
 [Demo](http://codepen.io/amostajo/pen/zBYoPM)
+
 [Demo (with Bootstrap)](http://codepen.io/amostajo/pen/mEdOxP)
+
 [Demo (with customized CSS)](http://codepen.io/amostajo/pen/BzaQxW)
+
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -55,6 +58,7 @@ Where:
 ### Props
 
 List of available props to use in component:
+
 Prop        | Data Type         | Default   | Description
 ----------- | ----------------- | --------- | -----------
 `value`     | String or Numeric |           | Tree's selected value.
@@ -117,6 +121,7 @@ new Vue({
         }
     }, 
 });
+```
 
 ## License
 
