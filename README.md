@@ -11,7 +11,7 @@ Tree view component for [Vue Js](http://vuejs.org/).
 
 [Demo (with customized CSS)](http://codepen.io/amostajo/pen/BzaQxW)
 
-
+## Package index
 - [Installation](#installation)
 - [Usage](#usage)
     - [Props](#props)
