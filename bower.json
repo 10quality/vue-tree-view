@@ -1,7 +1,28 @@
 {
-  "name": "vue-tree-view",
-  "private": true,
-  "dependencies": {
-    "vue": "^1.0.24"
-  }
+    "name": "vue-tree-view",
+    "description": "Tree View component for Vue JS.",
+    "main": [
+        "dist/vue.tree-view.min.js",
+        "dist/vue.tree-view.min.css"
+    ],
+    "homepage": "https://github.com/10quality/vue-tree-view",
+    "license": "MIT",
+    "keywords": [
+        "vue",
+        "vuejs",
+        "tree",
+        "view"
+    ],
+    "authors": [
+        "Alejandro Mostajo <amostajo@gmail.com>",
+        "10Quality <info@10quality.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/10quality/vue-tree-view.git"
+    },
+    "private": true,
+    "dependencies": {
+        "vue": "^1.0.24"
+    }
 }
