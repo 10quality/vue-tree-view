@@ -1,0 +1,87 @@
+// General icons styling.
+// @author Alejandro Mostajo <http://about.me/amostajo>
+// @copyright 10Quality <http://www.10quality.com>
+// @license MIT
+// @version 1.0.0
+
+@import 'colors';
+
+.icon
+{
+    &.node-parent
+    {
+        svg
+        {
+            width: 14px;
+            height: 14px;
+
+            .fill
+            {
+                fill: $c-black;
+                stroke:none;
+            }
+
+            .light
+            {
+                fill: $c-white;
+                stroke:none;
+            }
+        }
+    }
+
+    &.node-parent-toggled
+    {
+        svg
+        {
+            width: 14px;
+            height: 14px;
+
+            .back
+            {
+                fill: $c-white;
+                stroke: $c-black;
+                stroke-width: 3;
+                stroke-linecap: round;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 4;
+                stroke-dasharray: none;
+                stroke-dashoffset: 0;
+                stroke-opacity: 1;
+            }
+
+            .front
+            {
+                fill: $c-black;
+                stroke:none;
+            }
+
+            .light
+            {
+                fill: $c-white;
+                stroke:none;
+            }
+        }
+    }
+
+    &.node
+    {
+        svg
+        {
+            width: 8px;
+            height: 8px;
+
+            circle
+            {
+                fill:none;
+                stroke: $c-black;
+                stroke-width: 6;
+                stroke-linecap: round;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 4;
+                stroke-dasharray: none;
+                stroke-dashoffset: 0;
+                stroke-opacity: 1;
+            }
+        }
+    }
+}

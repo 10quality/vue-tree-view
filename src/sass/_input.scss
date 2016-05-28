@@ -1,0 +1,28 @@
+// General input styling.
+// @author Alejandro Mostajo <http://about.me/amostajo>
+// @copyright 10Quality <http://www.10quality.com>
+// @license MIT
+// @version 1.0.0
+
+@import 'colors';
+
+.treeview
+{
+    border: 1px solid $c-border;
+
+    .node
+    {
+        &:hover
+        {
+            background-color: $c-hover;
+            color: $c-white;
+        }
+
+        &.active
+        {
+            background-color: $c-hover;
+            color: $c-white;
+        }
+    }
+
+}

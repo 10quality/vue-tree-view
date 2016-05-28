@@ -1,0 +1,7 @@
+{
+  "name": "vue-tree-view",
+  "private": true,
+  "dependencies": {
+    "vue": "^1.0.24"
+  }
+}
