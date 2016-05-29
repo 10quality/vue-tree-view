@@ -106,7 +106,10 @@ Vue.component('treeview', Vue.extend({
             this.$set('tree['+index+'].isSelected', true);
             this.$set('value', value);
             // Call to event.
-            this.$dispatch('treeview_click', value);
+            this.$dispatch('treeview_click', {
+                label: this.tree[this.labelname],
+                value: this.tree[this.valuename],
+            });
         },
         /**
          * Unselects selected index.

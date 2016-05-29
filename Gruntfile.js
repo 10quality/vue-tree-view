@@ -49,6 +49,10 @@ module.exports = function(grunt)
                     {
                         src: 'src/js/vue.tree-view.js',
                         dest: 'dist/vue.tree-view.js'
+                    },
+                    {
+                        src: 'src/css/tree-view.css',
+                        dest: 'dist/vue.tree-view.css'
                     }
                 ],
             },

@@ -108,7 +108,7 @@ List of available events to use in component:
 
 Event            | Passes                  | Description
 ---------------- | ----------------------- | -----------
-`treeview_click` | `value`: Selected value | Triggered when a node is clicked.
+`treeview_click` | `node`: Selected node   | Triggered when a node is clicked.
 
 Usage example ([Demo](http://codepen.io/amostajo/pen/zBYomb)):
 
@@ -116,8 +116,10 @@ Usage example ([Demo](http://codepen.io/amostajo/pen/zBYomb)):
 new Vue({
     el: '#app',
     events: {
-        'treeview_click': function(value) {
+        'treeview_click': function(node) {
             // TODO my code here
+            console.log(node.label);
+            console.log(node.value);
         }
     }, 
 });

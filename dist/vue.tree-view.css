@@ -1,0 +1,86 @@
+/*!
+ * Tree View Vue Component.
+ * @copyright 10Quality <info@10quality.com>
+ */
+/**
+ * @author Alejandro Mostajo <http://about.me/amostajo>
+ * @copyright 10Quality <http://www.10quality.com>
+ * @license MIT
+ * @version 1.0.0
+ */
+.icon.node-parent svg {
+  width: 14px;
+  height: 14px; }
+  .icon.node-parent svg .fill {
+    fill: #000;
+    stroke: none; }
+  .icon.node-parent svg .light {
+    fill: #FFF;
+    stroke: none; }
+
+.icon.node-parent-toggled svg {
+  width: 14px;
+  height: 14px; }
+  .icon.node-parent-toggled svg .back {
+    fill: #FFF;
+    stroke: #000;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    stroke-opacity: 1; }
+  .icon.node-parent-toggled svg .front {
+    fill: #000;
+    stroke: none; }
+  .icon.node-parent-toggled svg .light {
+    fill: #FFF;
+    stroke: none; }
+
+.icon.node svg {
+  width: 8px;
+  height: 8px; }
+  .icon.node svg circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    stroke-opacity: 1; }
+
+.treeview {
+  border: 1px solid #A9A9A9; }
+  .treeview .node:hover {
+    background-color: #1E90FF;
+    color: #FFF; }
+  .treeview .node.active {
+    background-color: #1E90FF;
+    color: #FFF; }
+
+.treeview {
+  position: relative;
+  overflow: auto;
+  height: 140px; }
+  .treeview.inner {
+    border: none;
+    height: auto;
+    max-height: none; }
+  .treeview .node {
+    display: inline-block; }
+  .treeview .children {
+    overflow: hidden; }
+    .treeview .children .margin {
+      display: inline-block;
+      width: 20px; }
+    .treeview .children .nodes {
+      display: inline-block; }
+  .treeview span.icon {
+    width: 20px;
+    display: inline-block;
+    text-align: center; }
+
+/*# sourceMappingURL=tree-view.css.map */

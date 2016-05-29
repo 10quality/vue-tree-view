@@ -2,8 +2,8 @@
     "name": "vue-tree-view",
     "description": "Tree View component for Vue JS.",
     "main": [
-        "dist/vue.tree-view.min.js",
-        "dist/vue.tree-view.min.css"
+        "dist/vue.tree-view.js",
+        "dist/vue.tree-view.css"
     ],
     "homepage": "https://github.com/10quality/vue-tree-view",
     "license": "MIT",
