@@ -107,8 +107,8 @@ Vue.component('treeview', Vue.extend({
             this.$set('value', value);
             // Call to event.
             this.$dispatch('treeview_click', {
-                label: this.tree[this.labelname],
-                value: this.tree[this.valuename],
+                label: this.tree[index][this.labelname],
+                value: this.tree[index][this.valuename],
             });
         },
         /**
