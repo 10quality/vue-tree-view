@@ -45,14 +45,14 @@ Add the component in your vue view.
 <body id="app">
 
     <treeview :value.sync="value"
-        :tree="tree"
+        :model="treeData"
     ></treeview>
 
 </body>
 ```
 
 Where:
-* *tree* is the array tree within your vue model.
+* *model* is the tree data within your vue model.
 * *value* is the selected value in the tree you want to bind with your model.
 
 ### Props
@@ -61,8 +61,8 @@ List of available props to use in component:
 
 Prop        | Data Type         | Default   | Description
 ----------- | ----------------- | --------- | -----------
+`model`     | Array             | []        | Tree data.
 `value`     | String or Numeric |           | Tree's selected value.
-`tree`      | Array             | []        | Tree data.
 `class`     | String            |           | CSS Class to add to treeview.
 `children`  | String            | nodes     | Name of the property in the *tree* that contains child nodes.
 `labelname` | String            | label     | Name of the property in the *tree* that contains the node's label.
@@ -74,7 +74,7 @@ Usage example ([Demo](http://codepen.io/amostajo/pen/rLNWZQ)):
 <body id="app">
 
     <treeview :value.sync="id"
-        :tree="users"
+        :model="users"
         class="form-control"
         labelname="name"
         valuename="id"

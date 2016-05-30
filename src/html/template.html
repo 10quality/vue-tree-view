@@ -1,14 +1,14 @@
 <!-- TEMPLATE -->
 <div class="treeview {{class}}">
     <div class="node-data"
-        v-for="(index, node) in tree"
+        v-for="(index, node) in model"
     >
         <div class="node"
-            :class="{'active': node.isSelected}"
+            :class="{'active': isSelected(index)}"
             @click.prevent="select(index, node[valuename])"
         >
             <span class="icon node-parent-toggled"
-                v-if="isValidNodes(node[children]) && node.isOpened"
+                v-show="areValidNodes(node[children]) && isOpened(index)"
             >
                 <svg viewBox="0 0 35 35">
                     <g transform="translate(0,-1017.3621)">
@@ -19,7 +19,7 @@
                 </svg>
             </span>
             <span class="icon node-parent"
-                v-if="isValidNodes(node[children]) && !node.isOpened"
+                v-show="areValidNodes(node[children]) && !isOpened(index)"
             >
                 <svg width="14" height="14" viewBox="0 0 35 35">
                     <g transform="translate(0,-1017.3621)">
@@ -29,7 +29,7 @@
                 </svg>
             </span>
             <span class="icon node"
-                v-if="!isValidNodes(node[children])"
+                v-if="!areValidNodes(node[children])"
             >
                 <svg width="8" height="8" viewBox="0 0 35 35">
                     <g transform="translate(0,-1017.3622)">
@@ -37,11 +37,11 @@
                     </g>
                 </svg>
             </span>
-            <label>{{node[labelname]}}</label>
+            <label>{{{node[labelname]}}}</label>
         </div>
-        <div v-if="isValidNodes(node[children])"
+        <div v-if="areValidNodes(node[children])"
             class="children"
-            v-show="node.isOpened"
+            v-show="isOpened(index)"
         >
             <div class="margin"></div>
             <div class="nodes">
@@ -50,7 +50,8 @@
                     :labelname="labelname"
                     :valuename="valuename"
                     :children="children"
-                    :tree="node[children]"
+                    :model="node[children]"
+                    :parent.once="index"
                     class="inner"
                 ></treeview>
             </div>

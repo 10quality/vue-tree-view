@@ -4,15 +4,22 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../dist/vue.tree-view.min.css"/>
     </head>
+    <style type="text/css">
+        .treeview-custom {
+            height: 550px;
+        }
+    </style>
     <body id="app">
 
         <treeview :value.sync="value"
-            :tree="tree"
-            class="form-control"
+            :model="tree"
+            class="form-control treeview-custom"
             children="nodes"
             labelname="label"
             valuename="value"
         ></treeview>
+
+        <span v-if="value">Selected value: {{value}}</span>
 
         <script src="../bower_components/vue/dist/vue.js" type="text/javascript"></script>
         <script src="../dist/vue.tree-view.min.js" type="text/javascript"></script>
@@ -21,7 +28,7 @@
                 el: '#app',
                 data:
                 {
-                    value: undefined,
+                    value: 9,
                     tree: [
                         {
                             label: 'Root',
@@ -39,41 +46,6 @@
                                         { 
                                             label: 'Child 2 at #1',
                                             value: 3,
-                                            nodes: [
-                                                {
-                                                    label: 'Parent #3',
-                                                    value:7,
-                                                    nodes: [
-                                                        { 
-                                                            label: 'Child 1 at #3',
-                                                            value: 8,
-                                                            nodes: [],
-                                                        },
-                                                        { 
-                                                            label: 'Child 2 at #3',
-                                                            value: 9,
-                                                            nodes: [
-                                                                {
-                                                                    label: 'Parent #3',
-                                                                    value:7,
-                                                                    nodes: [
-                                                                        { 
-                                                                            label: 'Child 1 at #3',
-                                                                            value: 8,
-                                                                            nodes: [],
-                                                                        },
-                                                                        { 
-                                                                            label: 'Child 2 at #3',
-                                                                            value: 9,
-                                                                            nodes: [],
-                                                                        },
-                                                                    ],
-                                                                },
-                                                            ],
-                                                        },
-                                                    ],
-                                                },
-                                            ],
                                         },
                                     ],
                                 },
@@ -88,7 +60,7 @@
                                     ],
                                 },
                                 {
-                                    label: 'Child 1 at Root',
+                                    label: 'Child 1 at <i>Root</i>',
                                     value: 6,
                                 },
                                 {

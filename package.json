@@ -1,6 +1,6 @@
 {
   "name": "vue-tree-view",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Tree View component for Vue JS.",
   "main": "dist/vue.tree-view.min.js",
   "repository": {
