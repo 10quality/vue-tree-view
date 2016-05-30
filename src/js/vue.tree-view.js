@@ -36,7 +36,9 @@ Vue.component('treeview', Vue.extend({
         model:
         {
             Type: Array,
-            default: [],
+            default: function() {
+                return [];
+            },
         },
         /**
          * Additional CSS class to apply to component.
